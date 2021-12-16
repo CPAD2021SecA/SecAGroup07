@@ -46,5 +46,15 @@ class AppPages {
       page: () => EmailVerificationPage(),
       binding: EmailVerificationBindings(),
     ),
+    GetPage(
+      name: Routes.ADD_NOTE,
+      page: () => EditNotePage(),
+      binding: EditNoteBindings(),
+    ),
+    GetPage(
+      name: Routes.EDIT_NOTE,
+      page: () => EditNotePage(),
+      binding: EditNoteBindings(),
+    ),
   ];
 }
