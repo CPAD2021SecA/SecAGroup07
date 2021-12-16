@@ -22,7 +22,7 @@ jobs:
       
       - run: flutter pub get
       - run: flutter build web
-      - run: flutter build apk --debug --split-per-abi
+#      - run: flutter build apk --debug --split-per-abi
       - run: |
           flutter build ios --no-codesign
           cd build/ios/iphoneos
