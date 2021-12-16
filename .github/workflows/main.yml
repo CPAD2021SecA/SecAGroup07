@@ -33,10 +33,3 @@ jobs:
     - run: flutter pub get
     - run: flutter build web
       
-    - name: Commit files
-      run: |
-        git config --local user.email "snehilarya1@gmail.com"
-        git config --local user.name "Snehil Arya"
-        ls
-        git add build/web && git commit -m "Initial build/web subtree commit"
-        git push origin `git subtree split --prefix build/web master`:gh-pages --force
