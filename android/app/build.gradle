@@ -28,7 +28,7 @@ apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 28
-    ndkVersion "20.1.xxxxx"
+    ndkVersion "20.1.5948944"
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
