@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import '../../../notes/presentation/home/home_page.dart';
 
 class AuthClass {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -26,7 +27,6 @@ class AuthClass {
       if (googleSignInAccount != null) {
         UserCredential userCredential =
             await _auth.signInWithCredential(credential);
-        storeTokenAndData(userCredential);
         Navigator.pushAndRemoveUntil(
             context,
             MaterialPageRoute(builder: (builder) => HomePage()),

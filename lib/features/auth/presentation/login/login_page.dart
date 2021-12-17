@@ -111,7 +111,7 @@ class LoginPage extends GetView<LoginController> {
     return InkWell(
       onTap: onTap,
       child: Container(
-        width: 60,
+        width: 300,
         height: 60,
         child: Card(
           color: Colors.black,
