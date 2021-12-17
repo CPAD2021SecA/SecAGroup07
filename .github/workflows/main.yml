@@ -39,3 +39,11 @@ jobs:
           artifacts: "build/app/outputs/apk/debug/*"
           tag: v1.0.${{ github.run_number }}
           token: ${{ secrets.TOKEN }}
+
+      - name: Deploy Firebase Hosting
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting:note-app-82270
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          PROJECT_PATH: ./
