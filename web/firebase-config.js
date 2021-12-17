@@ -1,10 +1,10 @@
   var firebaseConfig = {
-    apiKey: "AIzaSyD71uv_G6VXf42D4QosBL-P-hx2fSET64Q",
-    authDomain: "q-note-d0609.firebaseapp.com",
-    databaseURL: "https://q-note-d0609.firebaseio.com",
-    projectId: "q-note-d0609",
-    storageBucket: "q-note-d0609.appspot.com",
-    messagingSenderId: "681159063100",
-    appId: "1:681159063100:web:cd4bee7d30936b72eaf539",
-    measurementId: "G-HCKWPKKWBQ"
+    apiKey: "AIzaSyA8y0ha5od06S7mlNNEe1DEX0vOEPXJ7WU",
+    authDomain: "note-app-82270.firebaseapp.com",
+    databaseURL: "https://note-app-82270.firebaseio.com",
+    projectId: "note-app-82270",
+    storageBucket: "note-app-82270.appspot.com",
+    messagingSenderId: "889319897579",
+    appId: "1:889319897579:web:77d2128e15e8d18bfb41ae",
+    measurementId: "G-3N1ECTY3EG"
   };
