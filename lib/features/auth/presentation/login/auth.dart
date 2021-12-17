@@ -4,6 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import '../../../notes/presentation/home/home_page.dart';
+import 'package:get/get.dart';
+
+import '../../../../routing/app_pages.dart';
+import '../../domain/usecases/login_use_case.dart';
 
 class AuthClass {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -27,10 +31,11 @@ class AuthClass {
       if (googleSignInAccount != null) {
         UserCredential userCredential =
             await _auth.signInWithCredential(credential);
-        Navigator.pushAndRemoveUntil(
-            context,
-            MaterialPageRoute(builder: (builder) => HomePage()),
-            (route) => false);
+        Get.offNamed(Routes.HOME);
+        // Navigator.pushAndRemoveUntil(
+        //     context,
+        //     MaterialPageRoute(builder: (builder) => HomePage()),
+        //     (route) => false);
 
         final snackBar =
             SnackBar(content: Text(userCredential.user.displayName));
