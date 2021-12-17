@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
+import 'auth.dart';
 import '../../../../core/widgets/app_logo.dart';
 import '../../../../core/widgets/blocking_progress.dart';
 import '../../../../core/widgets/custom_text_field.dart';
@@ -10,6 +11,7 @@ import '../../../../routing/app_pages.dart';
 import 'login_controller.dart';
 
 class LoginPage extends GetView<LoginController> {
+  AuthClass authClass = AuthClass();
   @override
   Widget build(BuildContext context) {
     return Obx(
