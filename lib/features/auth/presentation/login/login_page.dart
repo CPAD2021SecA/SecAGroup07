@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
+import 'auth.dart';
 import '../../../../core/widgets/app_logo.dart';
 import '../../../../core/widgets/blocking_progress.dart';
 import '../../../../core/widgets/custom_text_field.dart';
@@ -10,6 +11,7 @@ import '../../../../routing/app_pages.dart';
 import 'login_controller.dart';
 
 class LoginPage extends GetView<LoginController> {
+  AuthClass authClass = AuthClass();
   @override
   Widget build(BuildContext context) {
     return Obx(
@@ -67,6 +69,13 @@ class LoginPage extends GetView<LoginController> {
                       ),
                     ),
                   ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  buttonItem("assets/google.svg", "Continue with Google", 25,
+                      () async {
+                    await authClass.googleSignIn(context);
+                  }),
                   SizedBox(height: 8),
                   Text('OR'),
                   SizedBox(height: 8),
@@ -91,6 +100,40 @@ class LoginPage extends GetView<LoginController> {
                 ],
               ),
             ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget buttonItem(
+      String imagepath, String buttonName, double size, Function onTap) {
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        width: 300,
+        height: 60,
+        child: Card(
+          color: Colors.black,
+          elevation: 8,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15),
+            side: BorderSide(
+              width: 1,
+              color: Colors.grey,
+            ),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                buttonName,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 17,
+                ),
+              ),
+            ],
           ),
         ),
       ),
